@@ -1,0 +1,132 @@
+@import "normalize.css";
+
+/*font*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: wrap row;
+    flex-flow: wrap row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.form {
+    margin-top: 120px;
+    width: 540px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #1f3654;
+}
+
+h2 {
+    font-weight: 300;
+    color: #1f3654;
+}
+
+.form__row {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 44px;
+}
+
+.form__label {
+    font-size: 12px;
+    color: #88a6b0;
+}
+
+.form__input {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #1f3654;
+}
+
+::-webkit-input-placeholder {
+    color: #88a6b0;
+}
+::-moz-placeholder {
+    color: #88a6b0;
+}
+:-ms-input-placeholder {
+    color: #88a6b0;
+}
+:-moz-placeholder {
+    color: #88a6b0;
+    vertical-align: bottom;
+}
+
+.form__button {
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: 8px 0 16px 0;
+    width: 339px;
+    height: 58px;
+    border: none;
+    border-radius: 100px;
+    background-color: #ff3e7d;
+    -webkit-box-shadow: 0 4px 12px 0 rgba(155, 4, 54, 0.5);
+    box-shadow: 0 4px 12px 0 rgba(155, 4, 54, 0.5);
+    color: rgba(255,255,255,1);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: #f33573;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(155, 4, 54, 0.5);
+    box-shadow: 0 2px 8px 0 rgba(155, 4, 54, 0.5);
+    color: rgba(255,255,255,.8);
+}
+
+.icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 28px;
+}
+
+#input[value=""] + .icon {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+    .form {
+        width: 280px;
+    }
+
+    .form__button {
+        width: 239px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 580px) {
+    .form {
+        padding: 0 20px;
+    }
+}

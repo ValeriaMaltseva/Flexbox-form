@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Flexbox Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <h1>Sign In</h1>
+            <h2>Enter your details</h2>
+            <div class="form__row">
+                <label class="form__label">Email</label>
+                <input class="form__input" id="input" type="email" placeholder="E-mail" value="" onkeyup="this.setAttribute('value', this.value);">
+                <input type="image" class="icon" src="img/icon-clear.svg" onclick="document.getElementById('input').value=''" />
+            </div>
+            <div class="form__row">
+                <input class="form__input" type="password" placeholder="Password">
+            </div>
+            <div class="form__row">
+                <button class="form__button">Sign In</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
