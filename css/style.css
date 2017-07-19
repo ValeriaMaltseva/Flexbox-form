@@ -125,7 +125,8 @@ h2 {
     cursor: pointer;
 }
 
-.js-email-input[value=""] + .form__input-icon {
+.js-email-input[value=""] + .form__input-icon,
+.js-password-input[value=""] + .form__input-icon {
     display: none;
 }
 
