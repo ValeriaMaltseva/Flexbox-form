@@ -51,17 +51,30 @@ h2 {
 }
 
 .form__label {
-    font-size: 12px;
+    position: absolute;
+    top: 7px;
     color: #88a6b0;
+    z-index: 1;
+    transition: all ease-out 0.5s;
 }
 
 .form__input {
+    position: relative;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     padding: 8px 0;
     border: none;
     border-bottom: 1px solid #1f3654;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.form__input:focus ~ label, .form__input:not([value='']) ~ label {
+    display: block;
+    transform: translateY(-22px);
+    font-size: 12px;
+    color: #88a6b0;
 }
 
 ::-webkit-input-placeholder {
@@ -103,15 +116,16 @@ h2 {
     color: rgba(255,255,255,.8);
 }
 
-.icon {
+.form__input-icon {
     display: block;
-    cursor: pointer;
     position: absolute;
     right: 0;
-    top: 28px;
+    top: 15px;
+    z-index: 2;
+    cursor: pointer;
 }
 
-#input[value=""] + .icon {
+.js-email-input[value=""] + .form__input-icon {
     display: none;
 }
 
